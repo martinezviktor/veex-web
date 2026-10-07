@@ -185,6 +185,7 @@
       text-align: left;
     }
     @media (max-width: 720px) { .cards { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 720px) and (min-width: 461px) { .cards .card:last-child { grid-column: 1 / -1; } }
     @media (max-width: 460px) { .cards { grid-template-columns: 1fr; } }
     .card {
       background: var(--bg2);
@@ -198,6 +199,17 @@
       background: var(--purple);
       box-shadow: 0 0 14px rgba(124, 58, 237, 0.6);
     }
+    .card.feature { border-color: rgba(124, 58, 237, 0.55); background: linear-gradient(160deg, rgba(124, 58, 237, 0.14), var(--bg2) 60%); }
+    .creators-label {
+      margin-top: 22px;
+      color: var(--text3);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+    .chips.creators { margin-top: 12px; }
+    .chips.creators li { border-color: rgba(124, 58, 237, 0.45); color: var(--text); }
     .card.verified i { background: var(--green); box-shadow: 0 0 14px rgba(0, 195, 137, 0.5); }
     .card h3 {
       margin-top: 14px;
@@ -236,7 +248,7 @@
       <span>Buy, sell and trade collectibles with collectors you can trust.</span>
     </h1>
     <p class="sub">
-      <span>A home for collectors: show off your vault, find what you're hunting and talk with people who love the same things you do.</span>
+      <span>A home for collectors and creators: show off your vault, share what you make, find what you're hunting and talk with people who love the same things you do.</span>
     </p>
 
     <ul class="chips">
@@ -251,15 +263,31 @@
       <li><span>Retro Tech</span></li>
     </ul>
 
+    <div class="creators-label">And for creators</div>
+    <ul class="chips creators">
+      <li>Music</li>
+      <li>Photography</li>
+      <li>Painting</li>
+      <li>Illustration</li>
+      <li>Writing</li>
+      <li>Film &amp; Video</li>
+      <li>Podcasts</li>
+      <li>Design</li>
+      <li>Crafts</li>
+    </ul>
+
     <section class="community">
       <div class="eyebrow">More than a marketplace</div>
-      <h2>Built by collectors, for collectors.</h2>
-      <p>VEEX is a community first. Every collection has a story, and here you share it with people who get it.</p>
+      <h2>Built by collectors and creators.</h2>
+      <p>VEEX is a community first. Every collection has a story, and so does every song, photo and painting. Here you share them with people who get it.</p>
       <div class="cards">
+        <div class="card feature"><i></i><h3>Gallery</h3><p>The community wall. Share a piece of your collection or something you made: music, photos, paintings, writing. Likes and comments included.</p></div>
+        <div class="card feature"><i></i><h3>Studio</h3><p>Musician, photographer, painter, writer? Show your projects on your profile with links to Spotify, YouTube or your shop. They play right inside VEEX.</p></div>
         <div class="card"><i></i><h3>Your Vault</h3><p>Show off your collection with photos and the story behind each piece.</p></div>
-        <div class="card"><i></i><h3>Forum</h3><p>Talk shop, ask questions and swap stories with collectors who love what you love.</p></div>
-        <div class="card"><i></i><h3>Seeking</h3><p>Post what you're hunting for and let the community help you find it.</p></div>
+        <div class="card"><i></i><h3>Market</h3><p>Buy and sell with collectors who care as much as you do, in your currency and with the shipping you choose.</p></div>
+        <div class="card"><i></i><h3>Wanted</h3><p>Post what you're hunting for and let the community help you find it.</p></div>
         <div class="card"><i></i><h3>Trade, not just buy</h3><p>Swap pieces with other collectors and grow your collection without spending a dime.</p></div>
+        <div class="card"><i></i><h3>Forum</h3><p>Talk shop, ask questions and swap stories with collectors who love what you love.</p></div>
         <div class="card"><i></i><h3>Groups &amp; Chat</h3><p>Make friends, join groups and message collectors directly.</p></div>
         <div class="card verified"><i></i><h3>Verified &amp; Trusted</h3><p>Reputation and ratings on every trade, so you always know who you're dealing with.</p></div>
       </div>

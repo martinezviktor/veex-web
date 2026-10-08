@@ -122,7 +122,7 @@
     }
     var guardado = null
     try { guardado = localStorage.getItem('veex-lang') } catch (e) {}
-    idioma(guardado || ((navigator.language || 'en').toLowerCase().indexOf('es') === 0 ? 'es' : 'en'))
+    idioma(guardado || 'en')
   </script>
 </body>
 </html>

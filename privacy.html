@@ -17,9 +17,6 @@
     header { display: flex; align-items: center; justify-content: space-between; gap: 16px; max-width: 760px; margin: 0 auto; padding: 24px 16px; }
     .logo { font-family: 'Archivo', 'Jost', sans-serif; font-weight: 900; font-size: 34px; color: var(--text); text-decoration: none; line-height: 1; }
     .logo span { display: inline-block; width: 0.2em; height: 0.2em; margin-left: 0.06em; background: var(--purple); }
-    .lang { display: flex; gap: 4px; }
-    .lang button { background: none; border: 1px solid var(--border); color: var(--text3); font: 700 11px 'Jost', sans-serif; letter-spacing: 1px; padding: 6px 10px; cursor: pointer; }
-    .lang button.on { color: var(--text); border-color: var(--purple); }
     main { max-width: 760px; margin: 0 auto; padding: 8px 16px 48px; }
     .borrador { border: 1px solid var(--orange); color: var(--orange); padding: 10px 14px; font-size: 13px; font-weight: 600; margin-bottom: 28px; }
     h1 { font-size: clamp(28px, 6vw, 40px); line-height: 1.15; margin-bottom: 8px; }
@@ -30,18 +27,11 @@
     nav.docs { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 13px; }
     nav.docs a { color: var(--text2); text-decoration: none; }
     nav.docs a:hover { color: var(--text); }
-    [data-es] { display: none; }
-    html[lang="es"] [data-en] { display: none; }
-    html[lang="es"] [data-es] { display: block; }
   </style>
 </head>
 <body>
   <header>
     <a class="logo" href="/">VEEX<span></span></a>
-    <div class="lang">
-      <button type="button" id="btn-en" onclick="idioma('en')">EN</button>
-      <button type="button" id="btn-es" onclick="idioma('es')">ES</button>
-    </div>
   </header>
   <main>
     <div data-en>
@@ -75,54 +65,12 @@
       <h2>Contact</h2>
       <p>Privacy questions or requests: <a href="mailto:privacy@veexapp.com">privacy@veexapp.com</a>.</p>
     </div>
-    <div data-es>
-      <div class="borrador">Borrador — en revisión legal. Este documento puede cambiar antes del lanzamiento de VEEX.</div>
-      <h1>Política de privacidad</h1>
-      <div class="sub">Última actualización: octubre 2026</div>
-      <h2>Resumen</h2>
-      <p>Solo guardamos lo que VEEX necesita para funcionar. No vendemos tus datos personales, no los compartimos para publicidad y no mostramos anuncios. Última actualización: octubre 2026.</p>
-      <h2>Lo que tú nos das</h2>
-      <p>Cuenta: correo y contraseña (la contraseña está encriptada; nunca la vemos). Perfil: usuario, nombre, avatar o foto, bio, ciudad, país, categorías, idiomas, métodos de envío, moneda preferida y las redes que decidas agregar. Contenido y actividad: publicaciones, búsquedas, posts de Gallery, likes y comentarios, proyectos de Studio y sus links, posts del foro, mensajes y fotos, trades, reseñas, wishlist, piezas del Vault, amigos, bloqueos y reportes.</p>
-      <h2>Lo que se recoge automáticamente</h2>
-      <p>Como en cualquier página web, nuestros proveedores reciben datos técnicos cuando usas VEEX: dirección IP, tipo de dispositivo y navegador, y fechas y horas de acceso. Los usamos para dar el servicio, mantenerlo seguro y arreglar errores. No usamos cookies de publicidad ni de rastreo; solo guardamos tus preferencias (tema, idioma, tamaño de letra, ahorro de datos) en tu dispositivo.</p>
-      <h2>Qué ven los demás</h2>
-      <p>Tu perfil público (usuario, avatar, bio, nivel, estadísticas, categorías y tu ciudad si lo permites), tus publicaciones, búsquedas, posts de Gallery, comentarios y proyectos de Studio marcados como públicos. Los proyectos de Studio "Solo amigos" solo los ven tus amigos. Tu Vault lo ven tus amigos, o todos si así lo eliges. Tu wishlist es privada. Los mensajes solo los ven las personas de la conversación.</p>
-      <h2>Para qué lo usamos</h2>
-      <p>Para que VEEX funcione: crear y proteger tu cuenta, mostrar tu perfil y publicaciones, entregar mensajes y notificaciones, buscar coincidencias con tu wishlist, calcular la reputación, enviar correos del servicio (como confirmar tu cuenta o recuperar tu contraseña), cuidar la comunidad (bloqueos, reportes, moderación, verificación de cuentas) y mejorar la app. Los reportes son anónimos para la persona reportada. Las pruebas que nos envías para verificarte solo se usan para esa revisión y se borran después.</p>
-      <h2>Quién nos ayuda (proveedores)</h2>
-      <p>Supabase (base de datos, inicio de sesión y fotos); Cloudflare (alojamiento y entrega de la app); Resend (correos del servicio); ImprovMX (reenvío de los correos que llegan a @veexapp.com). Cuando escaneas un código de barras, solo ese número se envía a catálogos públicos (Open Library, MusicBrainz, Google Books) para llenar los datos. Los reproductores de música y video (Spotify, YouTube, etc.) solo se cargan cuando tocas Play y se rigen por las políticas de esas empresas. Estos proveedores solo procesan datos para darle su servicio a VEEX.</p>
-      <h2>Dónde se guardan tus datos</h2>
-      <p>Tus datos se guardan y procesan en Estados Unidos. Los datos viajan por conexiones encriptadas (HTTPS).</p>
-      <h2>Cuánto tiempo los guardamos</h2>
-      <p>Mientras tu cuenta esté activa. Cuando borras tu cuenta, tu perfil, contenido, mensajes y fotos se borran para siempre de inmediato. Las copias en respaldos temporales de nuestros proveedores, si las hay, se eliminan en un máximo de 30 días. Podemos guardar registros mínimos cuando la ley lo exija.</p>
-      <h2>Tus derechos y opciones</h2>
-      <p>En Ajustes puedes editar tu perfil, elegir quién ve tu Vault y quién te escribe, ocultar tu ciudad, apagar notificaciones, bloquear usuarios y borrar tu cuenta. También puedes pedirnos una copia de tus datos, corregirlos o borrarlos escribiendo a <a href="mailto:privacy@veexapp.com">privacy@veexapp.com</a>; respondemos en un máximo de 30 días. Si vives en California, la Unión Europea u otro lugar con leyes de privacidad, tienes estos derechos y los respetamos; no vendemos ni "compartimos" datos personales según la definición de la ley de California.</p>
-      <h2>Seguridad</h2>
-      <p>Usamos conexiones encriptadas, reglas de seguridad por fila en nuestra base de datos, y nunca guardamos contraseñas en texto plano. Ningún servicio es 100% seguro; si nos enteramos de una filtración que te afecte, te avisaremos.</p>
-      <h2>Menores de edad</h2>
-      <p>VEEX es solo para personas de 18 años o más (o la mayoría de edad donde viven). No recogemos datos de menores a sabiendas. Si crees que un menor creó una cuenta, avísanos y la borraremos.</p>
-      <h2>Cambios</h2>
-      <p>Si cambiamos esta política de forma importante, te avisaremos en la app o por correo.</p>
-      <h2>Contacto</h2>
-      <p>Preguntas o solicitudes de privacidad: <a href="mailto:privacy@veexapp.com">privacy@veexapp.com</a>.</p>
-    </div>
     <nav class="docs">
-      <a href="/terms">Terms / Términos</a>
-      <a href="/privacy">Privacy / Privacidad</a>
-      <a href="/delete-account">Delete account / Borrar cuenta</a>
+      <a href="/terms">Terms of Service</a>
+      <a href="/privacy">Privacy Policy</a>
+      <a href="/delete-account">Delete account</a>
       <a href="/">veexapp.com</a>
     </nav>
   </main>
-  <script>
-    function idioma(l) {
-      document.documentElement.lang = l
-      document.getElementById('btn-en').classList.toggle('on', l === 'en')
-      document.getElementById('btn-es').classList.toggle('on', l === 'es')
-      try { localStorage.setItem('veex-lang', l) } catch (e) {}
-    }
-    var guardado = null
-    try { guardado = localStorage.getItem('veex-lang') } catch (e) {}
-    idioma(guardado || 'en')
-  </script>
 </body>
 </html>

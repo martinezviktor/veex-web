@@ -17,9 +17,6 @@
     header { display: flex; align-items: center; justify-content: space-between; gap: 16px; max-width: 760px; margin: 0 auto; padding: 24px 16px; }
     .logo { font-family: 'Archivo', 'Jost', sans-serif; font-weight: 900; font-size: 34px; color: var(--text); text-decoration: none; line-height: 1; }
     .logo span { display: inline-block; width: 0.2em; height: 0.2em; margin-left: 0.06em; background: var(--purple); }
-    .lang { display: flex; gap: 4px; }
-    .lang button { background: none; border: 1px solid var(--border); color: var(--text3); font: 700 11px 'Jost', sans-serif; letter-spacing: 1px; padding: 6px 10px; cursor: pointer; }
-    .lang button.on { color: var(--text); border-color: var(--purple); }
     main { max-width: 760px; margin: 0 auto; padding: 8px 16px 48px; }
     .borrador { border: 1px solid var(--orange); color: var(--orange); padding: 10px 14px; font-size: 13px; font-weight: 600; margin-bottom: 28px; }
     h1 { font-size: clamp(28px, 6vw, 40px); line-height: 1.15; margin-bottom: 8px; }
@@ -30,18 +27,11 @@
     nav.docs { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 13px; }
     nav.docs a { color: var(--text2); text-decoration: none; }
     nav.docs a:hover { color: var(--text); }
-    [data-es] { display: none; }
-    html[lang="es"] [data-en] { display: none; }
-    html[lang="es"] [data-es] { display: block; }
   </style>
 </head>
 <body>
   <header>
     <a class="logo" href="/">VEEX<span></span></a>
-    <div class="lang">
-      <button type="button" id="btn-en" onclick="idioma('en')">EN</button>
-      <button type="button" id="btn-es" onclick="idioma('es')">ES</button>
-    </div>
   </header>
   <main>
     <div data-en>
@@ -85,64 +75,12 @@
       <h2>18. Contact</h2>
       <p>Questions about these Terms: <a href="mailto:legal@veexapp.com">legal@veexapp.com</a>.</p>
     </div>
-    <div data-es>
-      <div class="borrador">Borrador — en revisión legal. Este documento puede cambiar antes del lanzamiento de VEEX.</div>
-      <h1>Términos del servicio</h1>
-      <div class="sub">Última actualización: octubre 2026</div>
-      <h2>1. Aceptación</h2>
-      <p>Estos Términos son un acuerdo entre tú y VEEX ("VEEX", "nosotros"). Al crear una cuenta o usar la app o la página de VEEX, los aceptas. Si no estás de acuerdo, no uses VEEX. VEEX está en beta privada: las funciones pueden cambiar y algunas se pueden agregar o quitar. Última actualización: octubre 2026.</p>
-      <h2>2. Quién puede usar VEEX</h2>
-      <p>Debes tener al menos 18 años, o la mayoría de edad donde vives. Una cuenta por persona. La información de tu perfil debe ser real, y eres responsable de todo lo que pase en tu cuenta y de cuidar tu contraseña. Avísanos de inmediato si crees que alguien entró a tu cuenta.</p>
-      <h2>3. Qué es VEEX (y qué no es)</h2>
-      <p>VEEX es una plataforma donde los coleccionistas muestran sus colecciones, comparten lo que crean y se conectan para comprar, vender e intercambiar. VEEX no es parte de ninguna venta o trade entre usuarios. No recibimos pagos, no enviamos artículos, no inspeccionamos artículos y no garantizamos la autenticidad, el estado, el valor ni la legalidad de ningún artículo, ni la identidad o conducta de ningún usuario.</p>
-      <h2>4. Qué significa "Verified"</h2>
-      <p>"Verified Exchange" es el nombre de nuestro servicio. La insignia "✓ Verificado" aparece solo en cuentas que el equipo de VEEX revisó: el usuario la pidió (Ajustes → Verificación) y nos envió por correo al menos 2 pruebas, como una red social con su colección, ventas o reseñas anteriores, o una foto de uno de sus artículos con su usuario y la fecha escritos a mano. Podemos quitar la insignia en cualquier momento. NO significa que VEEX haya autenticado, calificado o tasado ningún artículo, ni que garanticemos a ese usuario. Haz siempre tus propias verificaciones antes de un trade. Las cuentas también pueden mostrar "En revisión" (recibimos reportes y los estamos revisando; mientras tanto sus anuncios del Mercado se ocultan) o "Suspendida".</p>
-      <h2>5. Publicaciones, trades y ventas</h2>
-      <p>Si publicas un artículo, debe ser tuyo o debes tener derecho a venderlo; descríbelo con honestidad (estado, edición, defectos) y usa fotos reales de ese artículo tomadas por ti. No se permiten fotos sacadas de internet, de otros vendedores o de catálogos: al publicar confirmas que las fotos son tuyas, y los anuncios que no cumplan esta regla se despublican. Compradores y vendedores acuerdan precio, pago, envío y devoluciones por su cuenta y bajo su propio riesgo, y cada uno es responsable de sus impuestos y de cumplir la ley donde vive. Las disputas son entre los usuarios involucrados; VEEX puede ayudar o intervenir, pero no está obligado.</p>
-      <h2>6. Artículos no permitidos</h2>
-      <p>Falsificaciones, réplicas, piratas o copias no autorizadas presentadas como auténticas; artículos robados; armas, municiones y explosivos; drogas y sus accesorios; alcohol y tabaco; animales vivos y especies protegidas; restos humanos; productos retirados del mercado o inseguros; materiales peligrosos; contenido para adultos; documentos de identidad, documentos oficiales o instrumentos financieros; artículos que violen derechos de otros; y cualquier cosa ilegal donde vive el vendedor o el comprador.</p>
-      <h2>7. Conductas no permitidas</h2>
-      <p>Estafas o publicaciones engañosas; acoso, amenazas, discursos de odio o bullying; spam; hacerse pasar por personas o marcas; reseñas falsas, trades falsos o cualquier manipulación de la reputación; recolectar datos de otros usuarios, extraer información o accesos automatizados; subir malware o intentar romper, sobrecargar o saltarse la seguridad de VEEX; y crear cuentas nuevas para evitar una suspensión.</p>
-      <h2>8. Tu contenido</h2>
-      <p>Las fotos, textos, links de música y demás contenido que publicas siguen siendo tuyos. Para operar VEEX, nos das una licencia no exclusiva, mundial y gratuita para alojar, guardar, cambiar el tamaño, mostrar y distribuir tu contenido dentro de VEEX y para mostrarlo cuando presentamos VEEX (por ejemplo en veexapp.com o en nuestras redes), dando crédito a tu usuario cuando sea posible. Esta licencia termina cuando borras el contenido o tu cuenta, salvo las copias que otros usuarios ya compartieron (como comentarios que te citan) y respaldos de corta duración. Debes tener todos los derechos necesarios sobre lo que publicas.</p>
-      <h2>9. Creadores, Gallery y Studio</h2>
-      <p>Comparte solo trabajos que sean tuyos o que tengas permiso de compartir. Los links y reproductores de Spotify, YouTube, SoundCloud, Bandcamp, Apple y otras plataformas los proveen esas empresas y siguen sus propios términos y políticas de privacidad. Los reproductores solo se cargan cuando tocas Play.</p>
-      <h2>10. Reclamos de derechos de autor</h2>
-      <p>Si crees que un contenido en VEEX viola tus derechos de autor, escribe a <a href="mailto:legal@veexapp.com">legal@veexapp.com</a> con: tus datos de contacto, la obra que te pertenece, el link exacto al contenido, una declaración de que crees de buena fe que el uso no está autorizado, una declaración de que la información es correcta y de que eres el dueño o estás autorizado a actuar en su nombre, y tu firma física o electrónica. Quitaremos el contenido que infrinja derechos y podremos cerrar las cuentas que lo hagan repetidamente. Si tu contenido se quitó por error, puedes enviarnos una contranotificación al mismo correo.</p>
-      <h2>11. Moderación, suspensión y cierre de cuentas</h2>
-      <p>Podemos quitar contenido, despublicar anuncios, limitar funciones o suspender o cerrar cuentas que incumplan estos Términos o pongan en riesgo a la comunidad, con o sin aviso. Puedes reportar usuarios, anuncios y publicaciones (los reportes son anónimos), o usar Ajustes → Reportar un problema. Cuando una cuenta recibe reportes de 3 personas distintas pasa automáticamente a "En revisión" mientras la revisamos, y podemos escribirle a su dueño pidiendo pruebas de que es de confianza; si no responde en 7 días, la cuenta puede ser suspendida. Usar mal los reportes también va contra estos Términos. Puedes borrar tu cuenta cuando quieras desde Ajustes.</p>
-      <h2>12. Privacidad</h2>
-      <p>Cómo manejamos tus datos lo explica nuestra Política de privacidad, que forma parte de estos Términos.</p>
-      <h2>13. Exclusión de garantías</h2>
-      <p>VEEX se ofrece "tal cual" y "según disponibilidad", sin garantías de ningún tipo, en la medida que lo permita la ley. No prometemos que VEEX esté siempre disponible, sin errores o seguro, ni que el contenido publicado por los usuarios sea correcto.</p>
-      <h2>14. Límite de responsabilidad</h2>
-      <p>En la medida que lo permita la ley, VEEX no se hace responsable por daños indirectos, incidentales, especiales o consecuentes, ni por pérdidas derivadas de trades entre usuarios, artículos, pagos, envíos, contenido de usuarios o interrupciones del servicio. Nuestra responsabilidad total por cualquier reclamo relacionado con VEEX se limita a lo que sea mayor entre lo que nos hayas pagado en los últimos 12 meses o 100 dólares estadounidenses.</p>
-      <h2>15. Indemnidad</h2>
-      <p>Si tu contenido, tus artículos o tu uso de VEEX incumplen estos Términos o la ley y generan un reclamo contra VEEX, aceptas cubrir los costos razonables de ese reclamo.</p>
-      <h2>16. Ley aplicable y disputas</h2>
-      <p>Estos Términos se rigen por las leyes del Estado de Nueva York, Estados Unidos, sin tener en cuenta sus normas de conflicto de leyes. Cualquier disputa se resolverá en los tribunales estatales o federales del condado de Nueva York, Nueva York, salvo que la ley de donde vives te dé otros derechos.</p>
-      <h2>17. Cambios</h2>
-      <p>Podemos actualizar estos Términos. Si los cambios son importantes, te avisaremos en la app o por correo antes de que apliquen. Si sigues usando VEEX después de los cambios, aceptas los nuevos Términos.</p>
-      <h2>18. Contacto</h2>
-      <p>Preguntas sobre estos Términos: <a href="mailto:legal@veexapp.com">legal@veexapp.com</a>.</p>
-    </div>
     <nav class="docs">
-      <a href="/terms">Terms / Términos</a>
-      <a href="/privacy">Privacy / Privacidad</a>
-      <a href="/delete-account">Delete account / Borrar cuenta</a>
+      <a href="/terms">Terms of Service</a>
+      <a href="/privacy">Privacy Policy</a>
+      <a href="/delete-account">Delete account</a>
       <a href="/">veexapp.com</a>
     </nav>
   </main>
-  <script>
-    function idioma(l) {
-      document.documentElement.lang = l
-      document.getElementById('btn-en').classList.toggle('on', l === 'en')
-      document.getElementById('btn-es').classList.toggle('on', l === 'es')
-      try { localStorage.setItem('veex-lang', l) } catch (e) {}
-    }
-    var guardado = null
-    try { guardado = localStorage.getItem('veex-lang') } catch (e) {}
-    idioma(guardado || 'en')
-  </script>
 </body>
 </html>

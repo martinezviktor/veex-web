@@ -61,6 +61,12 @@
       line-height: 1;
       letter-spacing: 0.01em;
       white-space: nowrap;
+      /* brillo: de blanco arriba a gris claro abajo (igual que en la app) */
+      background-image: linear-gradient(to bottom, #ffffff 27%, #c2c3ca 88%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
     }
     .logo span {
       display: inline-block;

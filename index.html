@@ -59,20 +59,32 @@
       font-weight: 900;
       font-size: clamp(72px, 18vw, 140px);
       line-height: 1;
-      letter-spacing: 0.01em;
+      letter-spacing: 0;
       white-space: nowrap;
-      /* brillo: de blanco arriba a gris claro abajo (igual que en la app) */
-      background-image: linear-gradient(to bottom, #ffffff 27%, #c2c3ca 88%);
+      color: #fff;
+    }
+    /* letras pegadas en un solo bloque (igual que en la app); la E lleva el palo del centro un pelito recortado */
+    .logo i {
+      font-style: normal;
+      display: inline-block;
+      line-height: 1;
+      padding: 0.15em 0;
+      margin: -0.15em 0;
+      /* brillo: de blanco arriba a gris claro abajo */
+      background-image: linear-gradient(to bottom, #ffffff 33%, #c2c3ca 78%);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
       -webkit-text-fill-color: transparent;
     }
+    .logo .e { margin-left: -0.13em; clip-path: polygon(0 0, 100% 0, 100% 0.535em, 0.56em 0.535em, 0.56em 0.733em, 100% 0.733em, 100% 100%, 0 100%); }
+    .logo .e2 { margin-left: -0.15em; }
+    .logo .x { margin-left: -0.13em; }
     .logo span {
       display: inline-block;
       width: 0.2em;
       height: 0.2em;
-      margin-left: 0.06em;
+      margin-left: 0.05em;
       background: var(--purple);
       box-shadow: 0 0 24px rgba(124, 58, 237, 0.7);
     }
@@ -130,7 +142,7 @@
 </head>
 <body>
   <main>
-    <div class="logo">VEEX<span></span></div>
+    <div class="logo" aria-label="VEEX"><i>V</i><i class="e">E</i><i class="e e2">E</i><i class="x">X</i><span></span></div>
 
     <div class="soon"><b>Coming soon</b></div>
 

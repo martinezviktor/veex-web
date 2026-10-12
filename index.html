@@ -82,17 +82,20 @@
     .logo .e2 { margin-left: -0.15em; }
     .logo .x { margin-left: -0.13em; }
     /* la X se dibuja como figura para que el cruce quede justo a media altura (en la letra queda un poco arriba) */
-    .logo .x { position: relative; background-image: none; }
+    .logo .x { background-image: none; }
     .logo .x::before {
       content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to bottom, #ffffff 33%, #c2c3ca 78%);
+      display: inline-block;
+      vertical-align: baseline;
+      width: 0.778em;
+      height: 0.688em;
+      margin-right: -0.778em;
+      background: linear-gradient(to bottom, #ffffff 0.134em, #c2c3ca 0.719em);
       clip-path: polygon(
-        0.028em 0.2953em, 0.295em 0.2953em, 0.401em 0.4822em, 0.508em 0.2953em, 0.755em 0.2953em,
-        0.532em 0.6393em,
-        0.779em 0.9833em, 0.51em 0.9833em, 0.381em 0.7801em, 0.252em 0.9833em, 0.003em 0.9833em,
-        0.25em 0.6393em
+        0.028em 0, 0.295em 0, 0.401em 0.1869em, 0.508em 0, 0.755em 0,
+        0.532em 0.344em,
+        0.779em 0.688em, 0.51em 0.688em, 0.381em 0.4848em, 0.252em 0.688em, 0.003em 0.688em,
+        0.25em 0.344em
       );
     }
     .logo span {

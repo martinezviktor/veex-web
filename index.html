@@ -81,23 +81,9 @@
     .logo .e { margin-left: -0.13em; clip-path: polygon(0 0, 100% 0, 100% 0.535em, 0.56em 0.535em, 0.56em 0.733em, 100% 0.733em, 100% 100%, 0 100%); }
     .logo .e2 { margin-left: -0.15em; }
     .logo .x { margin-left: -0.13em; }
-    /* la X se dibuja como figura para que el cruce quede justo a media altura (en la letra queda un poco arriba) */
-    .logo .x { background-image: none; }
-    .logo .x::before {
-      content: '';
-      display: inline-block;
-      vertical-align: baseline;
-      width: 0.778em;
-      height: 0.688em;
-      margin-right: -0.778em;
-      background: linear-gradient(to bottom, #ffffff 0.134em, #c2c3ca 0.719em);
-      clip-path: polygon(
-        0.0155em 0, 0.2735em 0, 0.391em 0.195em, 0.5085em 0, 0.7665em 0,
-        0.532em 0.344em,
-        0.7665em 0.688em, 0.5085em 0.688em, 0.391em 0.493em, 0.2735em 0.688em, 0.0155em 0.688em,
-        0.25em 0.344em
-      );
-    }
+    /* la X del logo es una letra propia (simétrica: cruce a media altura y puntas iguales) */
+    @font-face { font-family: 'Veex Logo X'; src: url('veex-logo-x.otf') format('opentype'); font-weight: 100 900; font-display: swap; }
+    .logo .x { font-family: 'Veex Logo X', 'Archivo', 'Jost', sans-serif; }
     .logo span {
       display: inline-block;
       width: 0.2em;

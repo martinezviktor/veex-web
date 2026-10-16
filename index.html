@@ -3,6 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Seguridad (auditoría, pendiente 5). GitHub Pages no deja poner cabeceras: lo que se puede va como meta.
+       Si se cambia el <script> de abajo, hay que recalcular su sha256 aquí o dejará de correr. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'sha256-rWQmG8GBNeGWkIZari/t/3JyeeLsRI853B95QUDQ5ts='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'none'; base-uri 'none'; form-action 'none'; object-src 'none'; upgrade-insecure-requests">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>VEEX — Coming soon</title>
   <meta name="description" content="VEEX — Coming soon.">
   <meta name="theme-color" content="#0a0a0a">
